@@ -1,4 +1,7 @@
+'use client';
+
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 export function Footer() {
   const scrollToSection = (id: string) => {
@@ -25,10 +28,6 @@ export function Footer() {
     visible: {
       opacity: 1,
       y: 0,
-      transition: {
-        duration: 0.5,
-        ease: "easeOut",
-      },
     },
   };
 
@@ -97,24 +96,26 @@ export function Footer() {
             <h4 className="text-white mb-4">Legal</h4>
             <ul className="space-y-2">
               <li>
-                <motion.a 
-                  whileHover={{ x: 5 }}
-                  transition={{ duration: 0.2 }}
-                  href="#" 
-                  className="text-gray-400 hover:text-[#84ff00] transition-colors"
-                >
-                  Privacy Policy
-                </motion.a>
+                <Link href="/privacy">
+                  <motion.span
+                    whileHover={{ x: 5 }}
+                    transition={{ duration: 0.2 }}
+                    className="text-gray-400 hover:text-[#84ff00] transition-colors cursor-pointer inline-block"
+                  >
+                    Privacy Policy
+                  </motion.span>
+                </Link>
               </li>
               <li>
-                <motion.a 
-                  whileHover={{ x: 5 }}
-                  transition={{ duration: 0.2 }}
-                  href="#" 
-                  className="text-gray-400 hover:text-[#84ff00] transition-colors"
-                >
-                  Terms & Conditions
-                </motion.a>
+                <Link href="/terms">
+                  <motion.span
+                    whileHover={{ x: 5 }}
+                    transition={{ duration: 0.2 }}
+                    className="text-gray-400 hover:text-[#84ff00] transition-colors cursor-pointer inline-block"
+                  >
+                    Terms & Conditions
+                  </motion.span>
+                </Link>
               </li>
             </ul>
           </motion.div>

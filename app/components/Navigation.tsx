@@ -1,10 +1,17 @@
+'use client';
+
 import { useState, useEffect } from 'react';
-import { Menu, X, ArrowUpRight } from 'lucide-react';
+import { usePathname, useRouter } from 'next/navigation';
+import { Menu, X, ArrowUpRight, Gift } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Link from 'next/link';
 
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
+  const router = useRouter();
+  const isHomePage = pathname === '/';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,10 +22,17 @@ export function Navigation() {
   }, []);
 
   const scrollToSection = (id: string) => {
+    setIsMobileMenuOpen(false);
+    
+    if (!isHomePage) {
+      // Navigate to home page with hash
+      router.push(`/#${id}`);
+      return;
+    }
+    
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
-      setIsMobileMenuOpen(false);
     }
   };
 
@@ -47,14 +61,15 @@ export function Navigation() {
           <div className="flex justify-between items-center h-20">
             {/* Logo */}
             <div className="flex-shrink-0">
-              <motion.button 
-                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="text-2xl text-white hover:text-[#84ff00] transition-colors"
-              >
-                DevSuite
-              </motion.button>
+              <Link href="/">
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="text-2xl text-white hover:text-[#84ff00] transition-colors cursor-pointer"
+                >
+                  DevSuite
+                </motion.div>
+              </Link>
             </div>
 
             {/* Desktop Navigation */}
@@ -72,10 +87,28 @@ export function Navigation() {
                   {link.name}
                 </motion.button>
               ))}
+              <Link href="/free-websites">
+                <motion.button
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.4, delay: 0.5 }}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="relative bg-gradient-to-r from-purple-600 to-purple-700 text-white px-6 py-2.5 rounded-full hover:from-purple-500 hover:to-purple-600 transition-all hover:shadow-lg hover:shadow-purple-500/30 flex items-center gap-2 overflow-hidden"
+                >
+                  <Gift size={16} className="animate-pulse" />
+                  <span className="relative z-10">Free Website</span>
+                  <motion.div
+                    className="absolute top-0 right-0 w-2 h-2 bg-yellow-400 rounded-full"
+                    animate={{ scale: [1, 1.5, 1] }}
+                    transition={{ duration: 2, repeat: Infinity }}
+                  />
+                </motion.button>
+              </Link>
               <motion.button
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.4, delay: 0.5 }}
+                transition={{ duration: 0.4, delay: 0.6 }}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => scrollToSection('contact')}
@@ -138,6 +171,19 @@ export function Navigation() {
                   {link.name}
                 </motion.button>
               ))}
+              <Link href="/free-websites" className="block w-full">
+                <motion.button
+                  variants={{
+                    hidden: { opacity: 0, x: -20 },
+                    visible: { opacity: 1, x: 0 },
+                  }}
+                  whileTap={{ scale: 0.95 }}
+                  className="w-full bg-gradient-to-r from-purple-600 to-purple-700 text-white px-6 py-3 rounded-full hover:from-purple-500 hover:to-purple-600 transition-all flex items-center justify-center gap-2"
+                >
+                  <Gift size={16} />
+                  Free Website
+                </motion.button>
+              </Link>
               <motion.button
                 variants={{
                   hidden: { opacity: 0, x: -20 },

@@ -1,3 +1,5 @@
+'use client';
+
 import { Target, Eye, CheckCircle2 } from 'lucide-react';
 import { motion } from 'framer-motion';
 
@@ -26,7 +28,7 @@ export function About() {
       x: 0,
       transition: {
         duration: 0.5,
-        ease: "easeOut",
+        ease: [0.25, 0.46, 0.45, 0.94],
       },
     },
   };
@@ -65,7 +67,7 @@ export function About() {
             ></motion.div>
             <motion.img 
               whileHover={{ scale: 1.02, transition: { duration: 0.3 } }}
-              src="https://images.unsplash.com/photo-1765561667528-28e39c6174dd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzb2Z0d2FyZSUyMGRldmVsb3BtZW50JTIwdGVhbSUyMG1vZGVybnxlbnwxfHx8fDE3NjU5MDQyMzJ8MA&ixlib=rb-4.1.0&q=80&w=1080"
+              src="/4F4A9110.JPG"
               alt="DevSuite Team"
               className="relative rounded-3xl shadow-2xl border border-white/10"
             />

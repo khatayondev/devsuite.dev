@@ -1,3 +1,5 @@
+'use client';
+
 import { AlertCircle, TrendingDown, Code, DollarSign } from 'lucide-react';
 import { motion } from 'framer-motion';
 
@@ -49,17 +51,29 @@ export function Problem() {
   };
 
   return (
-    <section className="py-20 bg-[#0a0a0a]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="relative py-24 lg:py-32 bg-[#0a0a0a] overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,#1a1a1a_0%,transparent_70%)] opacity-50"></div>
+      
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-20"
         >
-          <h2 className="text-white mb-4 text-3xl md:text-4xl">The Problem</h2>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-red-500/30 bg-red-500/10 backdrop-blur-sm mb-6"
+          >
+            <AlertCircle className="w-4 h-4 text-red-400" />
+            <span className="text-red-400 text-sm font-medium">Common Challenges</span>
+          </motion.div>
+          <h2 className="text-white mb-6 text-4xl md:text-5xl lg:text-6xl font-bold">The Problem</h2>
+          <p className="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
             Most businesses struggle with digital products that cost time, money, and momentum
           </p>
         </motion.div>
@@ -75,18 +89,21 @@ export function Problem() {
             <motion.div 
               key={index}
               variants={itemVariants}
-              whileHover={{ y: -8, transition: { duration: 0.3 } }}
-              className="bg-gradient-to-br from-[#1a1a1a] to-[#0f0f0f] p-6 rounded-2xl border border-white/5 hover:border-red-500/30 transition-all hover:shadow-lg hover:shadow-red-500/10"
+              whileHover={{ y: -12, scale: 1.03, transition: { duration: 0.3 } }}
+              className="relative bg-gradient-to-br from-[#1a1a1a] to-[#0f0f0f] backdrop-blur-sm p-8 rounded-2xl border border-white/10 hover:border-red-500/40 transition-all group overflow-hidden"
             >
+              {/* Hover Glow */}
+              <div className="absolute inset-0 bg-gradient-to-br from-red-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              
               <motion.div 
-                whileHover={{ scale: 1.1, rotate: 5 }}
-                transition={{ duration: 0.3 }}
-                className="w-12 h-12 bg-red-500/10 rounded-xl flex items-center justify-center mb-4 border border-red-500/20"
+                whileHover={{ scale: 1.15, rotate: 360 }}
+                transition={{ duration: 0.5 }}
+                className="relative w-14 h-14 bg-red-500/10 rounded-2xl flex items-center justify-center mb-5 border border-red-500/20 shadow-lg group-hover:shadow-xl group-hover:shadow-red-500/30 transition-all"
               >
-                <problem.icon className="text-red-500" size={24} />
+                <problem.icon className="text-red-400" size={28} />
               </motion.div>
-              <h3 className="text-white mb-2">{problem.title}</h3>
-              <p className="text-gray-400 text-sm">{problem.description}</p>
+              <h3 className="relative text-white mb-3 font-semibold leading-tight">{problem.title}</h3>
+              <p className="relative text-gray-400 text-sm leading-relaxed">{problem.description}</p>
             </motion.div>
           ))}
         </motion.div>

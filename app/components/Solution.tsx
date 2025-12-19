@@ -1,3 +1,5 @@
+'use client';
+
 import { CheckCircle2, Lightbulb, Palette, Rocket } from 'lucide-react';
 import { motion } from 'framer-motion';
 

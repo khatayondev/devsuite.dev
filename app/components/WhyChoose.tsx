@@ -1,3 +1,5 @@
+'use client';
+
 import { TrendingUp, MessageSquare, Target, Boxes, HeartHandshake } from 'lucide-react';
 import { motion } from 'framer-motion';
 

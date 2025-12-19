@@ -1,3 +1,5 @@
+'use client';
+
 import { Globe, Layers, Zap, Settings, FileText, Briefcase } from 'lucide-react';
 import { motion } from 'framer-motion';
 
@@ -70,17 +72,29 @@ export function WhatWeBuild() {
   };
 
   return (
-    <section className="py-20 bg-[#0a0a0a]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="relative py-24 lg:py-32 bg-[#0a0a0a] overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,#1a1a1a_0%,transparent_70%)] opacity-50"></div>
+      
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-20"
         >
-          <h2 className="text-white mb-4 text-3xl md:text-4xl">What We Build</h2>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#84ff00]/30 bg-[#84ff00]/10 backdrop-blur-sm mb-6"
+          >
+            <span className="w-2 h-2 rounded-full bg-[#84ff00] animate-pulse"></span>
+            <span className="text-[#84ff00] text-sm font-medium">Our Expertise</span>
+          </motion.div>
+          <h2 className="text-white mb-6 text-4xl md:text-5xl lg:text-6xl font-bold">What We Build</h2>
+          <p className="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
             From landing pages to complex platforms, we create digital products that drive results
           </p>
         </motion.div>
@@ -96,17 +110,22 @@ export function WhatWeBuild() {
             <motion.div 
               key={index}
               variants={itemVariants}
-              whileHover={{ y: -8, transition: { duration: 0.3 } }}
-              className={`bg-gradient-to-br ${service.color} p-8 rounded-2xl border ${service.borderColor} hover:border-opacity-50 transition-all group hover:shadow-xl`}
+              whileHover={{ y: -12, scale: 1.03, transition: { duration: 0.3 } }}
+              className={`relative bg-gradient-to-br ${service.color} backdrop-blur-sm p-8 rounded-2xl border ${service.borderColor} hover:border-opacity-70 transition-all group overflow-hidden`}
             >
+              {/* Animated Background */}
               <motion.div 
-                whileHover={{ scale: 1.15, rotate: 5 }}
-                transition={{ duration: 0.3 }}
-                className={`w-14 h-14 bg-black/40 rounded-xl flex items-center justify-center mb-4 border border-white/10`}
+                className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+              />
+              
+              <motion.div 
+                whileHover={{ scale: 1.2, rotate: 360 }}
+                transition={{ duration: 0.5 }}
+                className={`relative w-16 h-16 bg-black/40 rounded-2xl flex items-center justify-center mb-5 border border-white/10 shadow-lg group-hover:shadow-2xl transition-all`}
               >
-                <service.icon className={service.iconColor} size={28} />
+                <service.icon className={service.iconColor} size={32} />
               </motion.div>
-              <h3 className="text-white">{service.title}</h3>
+              <h3 className="relative text-white text-xl font-semibold leading-tight">{service.title}</h3>
             </motion.div>
           ))}
         </motion.div>
