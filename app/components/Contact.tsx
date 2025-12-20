@@ -63,7 +63,7 @@ export function Contact() {
             </motion.a>
 
             <motion.a
-              href="tel:+1234567890"
+              href="tel:0593443360"
               variants={itemVariants}
               whileHover={{ scale: 1.05, y: -5 }}
               className="bg-gradient-to-br from-[#1a1a1a] to-[#0f0f0f] p-8 rounded-3xl border border-white/10 hover:border-[#84ff00]/30 transition-all group"
@@ -74,7 +74,7 @@ export function Contact() {
               <h3 className="text-white text-xl font-bold mb-2">Call Us</h3>
               <p className="text-gray-400 mb-4">Give us a call during business hours for immediate assistance</p>
               <div className="text-[#84ff00] font-semibold group-hover:text-[#9eff33]">
-                +1 (234) 567-890
+                0593443360
               </div>
             </motion.a>
 

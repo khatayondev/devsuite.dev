@@ -189,13 +189,13 @@ export default function PrivacyPolicyPage() {
               </motion.a>
               
               <motion.a
-                href="tel:+1234567890"
+                href="tel:0593443360"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="flex items-center gap-3 bg-white/5 backdrop-blur-sm px-6 py-3 rounded-full border border-white/10 hover:border-[#84ff00]/30 transition-all text-gray-300"
               >
                 <Phone size={20} className="text-[#84ff00]" />
-                +1 (234) 567-890
+                0593443360
               </motion.a>
             </div>
           </motion.div>
