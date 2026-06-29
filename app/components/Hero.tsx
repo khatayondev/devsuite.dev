@@ -1,6 +1,6 @@
 'use client';
 
-import { ArrowRight, Sparkles, Code2, Zap } from 'lucide-react';
+import { ArrowRight, Code2 } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export function Hero() {
@@ -21,19 +21,19 @@ export function Hero() {
         <motion.div 
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 0.3, scale: 1 }}
-          transition={{ duration: 2, ease: "easeOut", repeat: Infinity, repeatType: "reverse", repeatDelay: 1 }}
+          transition={{ duration: 2, ease: "easeOut" as const, repeat: Infinity, repeatType: "reverse", repeatDelay: 1 }}
           className="absolute top-1/4 -left-48 w-[600px] h-[600px] bg-[#84ff00] rounded-full blur-[150px]"
         ></motion.div>
         <motion.div 
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 0.2, scale: 1 }}
-          transition={{ duration: 2, delay: 0.5, ease: "easeOut", repeat: Infinity, repeatType: "reverse", repeatDelay: 1 }}
+          transition={{ duration: 2, delay: 0.5, ease: "easeOut" as const, repeat: Infinity, repeatType: "reverse", repeatDelay: 1 }}
           className="absolute bottom-1/4 -right-48 w-[600px] h-[600px] bg-[#84ff00] rounded-full blur-[150px]"
         ></motion.div>
         <motion.div 
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 0.15, scale: 1 }}
-          transition={{ duration: 2, delay: 1, ease: "easeOut", repeat: Infinity, repeatType: "reverse", repeatDelay: 1 }}
+          transition={{ duration: 2, delay: 1, ease: "easeOut" as const, repeat: Infinity, repeatType: "reverse", repeatDelay: 1 }}
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-[#60b000] rounded-full blur-[120px]"
         ></motion.div>
       </div>
@@ -69,21 +69,6 @@ export function Hero() {
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-5xl mx-auto text-center">
-          {/* Animated Badge */}
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-            className="inline-flex items-center gap-3 px-6 py-3 rounded-full border border-[#84ff00]/30 bg-[#84ff00]/10 backdrop-blur-sm mb-8 shadow-lg shadow-[#84ff00]/10"
-          >
-            <Sparkles className="w-4 h-4 text-[#84ff00] animate-pulse" />
-            <span className="text-[#84ff00] text-sm font-medium">Elite Software Development Agency</span>
-            <motion.div
-              animate={{ scale: [1, 1.2, 1] }}
-              transition={{ duration: 2, repeat: Infinity }}
-              className="w-2 h-2 rounded-full bg-[#84ff00]"
-            />
-          </motion.div>
 
           {/* Main Headline with Gradient Text */}
           <motion.h1 

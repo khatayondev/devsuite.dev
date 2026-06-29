@@ -66,7 +66,7 @@ export function WhatWeBuild() {
       y: 0,
       transition: {
         duration: 0.5,
-        ease: "easeOut",
+        ease: "easeOut" as const,
       },
     },
   };
@@ -84,15 +84,7 @@ export function WhatWeBuild() {
           transition={{ duration: 0.6 }}
           className="text-center mb-20"
         >
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#84ff00]/30 bg-[#84ff00]/10 backdrop-blur-sm mb-6"
-          >
-            <span className="w-2 h-2 rounded-full bg-[#84ff00] animate-pulse"></span>
-            <span className="text-[#84ff00] text-sm font-medium">Our Expertise</span>
-          </motion.div>
+
           <h2 className="text-white mb-6 text-4xl md:text-5xl lg:text-6xl font-bold">What We Build</h2>
           <p className="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
             From landing pages to complex platforms, we create digital products that drive results

@@ -26,7 +26,7 @@ export function CTASection() {
           transition={{
             duration: 5,
             repeat: Infinity,
-            ease: "easeInOut",
+            ease: "easeInOut" as const,
           }}
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#84ff00] rounded-full blur-[180px]"
         ></motion.div>
@@ -38,7 +38,7 @@ export function CTASection() {
           transition={{
             duration: 6,
             repeat: Infinity,
-            ease: "easeInOut",
+            ease: "easeInOut" as const,
             delay: 1,
           }}
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#60b000] rounded-full blur-[150px]"
@@ -46,15 +46,7 @@ export function CTASection() {
       </div>
 
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#84ff00]/30 bg-[#84ff00]/10 backdrop-blur-sm mb-8"
-        >
-          <span className="w-2 h-2 rounded-full bg-[#84ff00] animate-pulse"></span>
-          <span className="text-[#84ff00] text-sm font-medium">Ready to Start?</span>
-        </motion.div>
+
         
         <motion.h2 
           initial={{ opacity: 0, y: 30 }}

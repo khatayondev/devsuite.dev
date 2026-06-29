@@ -44,7 +44,7 @@ export function Proof() {
       scale: 1,
       transition: {
         duration: 0.5,
-        ease: "easeOut",
+        ease: "easeOut" as const,
       },
     },
   };
@@ -80,15 +80,7 @@ export function Proof() {
           transition={{ duration: 0.6 }}
           className="text-center mb-20"
         >
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#84ff00]/30 bg-[#84ff00]/10 backdrop-blur-sm mb-6"
-          >
-            <span className="w-2 h-2 rounded-full bg-[#84ff00] animate-pulse"></span>
-            <span className="text-[#84ff00] text-sm font-medium">Why Choose Us</span>
-          </motion.div>
+
           <h2 className="text-white mb-6 text-4xl md:text-5xl lg:text-6xl font-bold">Proof of Capability</h2>
           <p className="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
             We focus on results-driven development. Our experience spans multiple industries, project sizes, and technical complexities — delivering solutions that perform, scale, and last.

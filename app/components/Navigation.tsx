@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
-import { Menu, X, ArrowUpRight, Gift } from 'lucide-react';
+import { Menu, X, ArrowUpRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 
@@ -87,24 +87,7 @@ export function Navigation() {
                   {link.name}
                 </motion.button>
               ))}
-              <Link href="/free-websites">
-                <motion.button
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.4, delay: 0.5 }}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="relative bg-gradient-to-r from-purple-600 to-purple-700 text-white px-6 py-2.5 rounded-full hover:from-purple-500 hover:to-purple-600 transition-all hover:shadow-lg hover:shadow-purple-500/30 flex items-center gap-2 overflow-hidden"
-                >
-                  <Gift size={16} className="animate-pulse" />
-                  <span className="relative z-10">Free Website</span>
-                  <motion.div
-                    className="absolute top-0 right-0 w-2 h-2 bg-yellow-400 rounded-full"
-                    animate={{ scale: [1, 1.5, 1] }}
-                    transition={{ duration: 2, repeat: Infinity }}
-                  />
-                </motion.button>
-              </Link>
+
               <motion.button
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -171,19 +154,7 @@ export function Navigation() {
                   {link.name}
                 </motion.button>
               ))}
-              <Link href="/free-websites" className="block w-full">
-                <motion.button
-                  variants={{
-                    hidden: { opacity: 0, x: -20 },
-                    visible: { opacity: 1, x: 0 },
-                  }}
-                  whileTap={{ scale: 0.95 }}
-                  className="w-full bg-gradient-to-r from-purple-600 to-purple-700 text-white px-6 py-3 rounded-full hover:from-purple-500 hover:to-purple-600 transition-all flex items-center justify-center gap-2"
-                >
-                  <Gift size={16} />
-                  Free Website
-                </motion.button>
-              </Link>
+
               <motion.button
                 variants={{
                   hidden: { opacity: 0, x: -20 },

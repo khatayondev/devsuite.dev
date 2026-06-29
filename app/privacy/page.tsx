@@ -66,15 +66,7 @@ export default function PrivacyPolicyPage() {
         </div>
 
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#84ff00]/30 bg-[#84ff00]/10 backdrop-blur-sm mb-6"
-          >
-            <Shield className="w-4 h-4 text-[#84ff00]" />
-            <span className="text-[#84ff00] text-sm font-medium">Privacy First</span>
-          </motion.div>
+
 
           <motion.h1 
             initial={{ opacity: 0, y: 30 }}

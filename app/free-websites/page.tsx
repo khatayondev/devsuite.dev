@@ -136,20 +136,7 @@ export default function FreeWebsitesPage() {
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="inline-flex items-center gap-3 px-6 py-3 rounded-full border border-[#84ff00]/30 bg-[#84ff00]/10 backdrop-blur-sm mb-8"
-            >
-              <Sparkles className="w-5 h-5 text-[#84ff00]" />
-              <span className="text-[#84ff00] font-semibold">Limited Time Offer</span>
-              <motion.div
-                animate={{ scale: [1, 1.2, 1] }}
-                transition={{ duration: 2, repeat: Infinity }}
-                className="w-2 h-2 rounded-full bg-[#84ff00]"
-              />
-            </motion.div>
+
 
             <motion.h1 
               initial={{ opacity: 0, y: 30 }}
