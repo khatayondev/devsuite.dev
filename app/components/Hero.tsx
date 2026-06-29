@@ -75,7 +75,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-            className="text-white mb-8 text-5xl md:text-6xl lg:text-7xl leading-[1.1] font-bold tracking-tight"
+            className="text-white mb-8 text-5xl md:text-6xl lg:text-7xl leading-[1.1] font-black tracking-tight"
           >
             Transform Your Vision Into{' '}
             <span className="relative inline-block">
