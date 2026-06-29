@@ -12,7 +12,7 @@ export function Hero() {
   };
 
   return (
-    <section className="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden bg-black pt-20">
+    <section className="relative min-h-screen lg:h-screen lg:min-h-[750px] flex items-center justify-center overflow-hidden bg-black pt-24 pb-12">
       {/* Animated Grid Background */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#1a1a1a_1px,transparent_1px),linear-gradient(to_bottom,#1a1a1a_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]"></div>
       
@@ -107,19 +107,19 @@ export function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
-            className="grid grid-cols-3 gap-8 max-w-2xl mx-auto mb-12 p-6 rounded-2xl border border-white/10 bg-gradient-to-b from-white/[0.07] to-white/[0.02] backdrop-blur-xl shadow-[inset_0_1px_1px_rgba(255,255,255,0.15),0_8px_32px_0_rgba(0,0,0,0.37)]"
+            className="grid grid-cols-3 gap-2 sm:gap-8 max-w-2xl mx-auto mb-12 p-3 sm:p-6 rounded-2xl border border-white/10 bg-gradient-to-b from-white/[0.07] to-white/[0.02] backdrop-blur-xl shadow-[inset_0_1px_1px_rgba(255,255,255,0.15),0_8px_32px_0_rgba(0,0,0,0.37)]"
           >
             <div className="text-center">
-              <div className="text-3xl font-bold text-[#84ff00] mb-1">50+</div>
-              <div className="text-sm text-gray-400">Projects Delivered</div>
+              <div className="text-xl sm:text-3xl font-bold text-[#84ff00] mb-1">50+</div>
+              <div className="text-[10px] sm:text-sm text-gray-400">Projects Delivered</div>
             </div>
             <div className="text-center border-x border-white/10">
-              <div className="text-3xl font-bold text-[#84ff00] mb-1">98%</div>
-              <div className="text-sm text-gray-400">Client Satisfaction</div>
+              <div className="text-xl sm:text-3xl font-bold text-[#84ff00] mb-1">98%</div>
+              <div className="text-[10px] sm:text-sm text-gray-400">Client Satisfaction</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-[#84ff00] mb-1">24/7</div>
-              <div className="text-sm text-gray-400">Support Available</div>
+              <div className="text-xl sm:text-3xl font-bold text-[#84ff00] mb-1">24/7</div>
+              <div className="text-[10px] sm:text-sm text-gray-400">Support Available</div>
             </div>
           </motion.div>
           

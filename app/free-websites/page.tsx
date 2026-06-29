@@ -116,7 +116,7 @@ export default function FreeWebsitesPage() {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 overflow-hidden">
+      <section className="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden pt-20">
         {/* Animated Grid Background */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#1a1a1a_1px,transparent_1px),linear-gradient(to_bottom,#1a1a1a_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]"></div>
         
@@ -142,7 +142,7 @@ export default function FreeWebsitesPage() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-white mb-8 text-5xl md:text-6xl lg:text-7xl leading-[1.1] font-bold tracking-tight"
+              className="text-white mb-8 text-4xl sm:text-6xl md:text-7xl lg:text-8xl leading-[1.1] font-extrabold tracking-tight font-syne"
             >
               Get Your{' '}
               <span className="bg-gradient-to-r from-[#84ff00] via-[#9eff33] to-[#84ff00] bg-clip-text text-transparent animate-gradient bg-[length:200%_auto]">
@@ -155,7 +155,7 @@ export default function FreeWebsitesPage() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="text-xl md:text-2xl text-gray-400 mb-12 leading-relaxed"
+              className="text-base md:text-lg text-gray-400 mb-12 leading-relaxed"
             >
               We're building <span className="text-[#84ff00] font-semibold">100 free websites</span> for small and medium-sized businesses. Professional design, modern technology, zero cost.
             </motion.p>
