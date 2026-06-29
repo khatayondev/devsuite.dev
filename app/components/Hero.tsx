@@ -75,19 +75,21 @@ export function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-            className="text-white mb-8 text-6xl md:text-7xl lg:text-8xl leading-[1.1] font-extrabold tracking-tight font-syne"
+            className="text-white mb-8 text-4xl sm:text-6xl md:text-7xl lg:text-8xl leading-[1.1] font-extrabold tracking-tight font-syne"
           >
-            Transform Your<br />
-            Vision Into<br />
-            <span className="relative inline-block mt-2">
-              <span className="bg-gradient-to-r from-[#84ff00] via-[#9eff33] to-[#84ff00] bg-clip-text text-transparent animate-gradient bg-[length:200%_auto]">
-                Digital Reality
+            <span className="block">Transform Your</span>
+            <span className="block">Vision Into</span>
+            <span className="block mt-2">
+              <span className="relative inline-block">
+                <span className="bg-gradient-to-r from-[#84ff00] via-[#9eff33] to-[#84ff00] bg-clip-text text-transparent animate-gradient bg-[length:200%_auto]">
+                  Digital Reality
+                </span>
+                <motion.div
+                  className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#84ff00] to-transparent"
+                  animate={{ scaleX: [0, 1, 0] }}
+                  transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                />
               </span>
-              <motion.div
-                className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#84ff00] to-transparent"
-                animate={{ scaleX: [0, 1, 0] }}
-                transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-              />
             </span>
           </motion.h1>
           
