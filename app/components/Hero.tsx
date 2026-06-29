@@ -75,7 +75,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-            className="text-white mb-8 text-5xl md:text-6xl lg:text-7xl leading-[1.1] font-extrabold tracking-tight font-syne"
+            className="text-white mb-8 text-6xl md:text-7xl lg:text-8xl leading-[1.1] font-extrabold tracking-tight font-syne"
           >
             Transform Your Vision Into{' '}
             <span className="relative inline-block">
@@ -94,7 +94,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-            className="text-xl md:text-2xl text-gray-400 mb-12 leading-relaxed max-w-4xl mx-auto"
+            className="text-base md:text-lg text-gray-400 mb-12 leading-relaxed max-w-4xl mx-auto"
           >
             We craft cutting-edge websites, web applications, and custom software solutions that drive growth, enhance efficiency, and deliver exceptional user experiences.
           </motion.p>

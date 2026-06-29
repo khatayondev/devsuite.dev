@@ -8,6 +8,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
+        sans: ["var(--font-poppins)", "sans-serif"],
         syne: ["var(--font-syne)", "sans-serif"],
       },
     },
