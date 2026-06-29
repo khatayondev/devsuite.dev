@@ -12,7 +12,7 @@ export function Hero() {
   };
 
   return (
-    <section className="relative min-h-screen pt-32 pb-24 lg:pt-40 lg:pb-32 overflow-hidden bg-black">
+    <section className="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden bg-black pt-20">
       {/* Animated Grid Background */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#1a1a1a_1px,transparent_1px),linear-gradient(to_bottom,#1a1a1a_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]"></div>
       
@@ -46,7 +46,7 @@ export function Hero() {
             rotate: [0, 5, 0],
           }}
           transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute top-1/4 left-1/4 w-16 h-16 border border-[#84ff00]/20 rounded-lg backdrop-blur-sm"
+          className="absolute top-1/4 left-1/4 w-16 h-16 border border-white/10 bg-gradient-to-br from-white/[0.08] to-white/[0.03] backdrop-blur-md shadow-[inset_0_1px_1px_rgba(255,255,255,0.15)] rounded-lg pointer-events-none"
         />
         <motion.div
           animate={{ 
@@ -54,7 +54,7 @@ export function Hero() {
             rotate: [0, -5, 0],
           }}
           transition={{ duration: 5, delay: 1, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute top-1/3 right-1/4 w-12 h-12 border border-[#84ff00]/20 rounded-full backdrop-blur-sm"
+          className="absolute top-1/3 right-1/4 w-12 h-12 border border-white/10 bg-gradient-to-br from-white/[0.08] to-white/[0.03] backdrop-blur-md shadow-[inset_0_1px_1px_rgba(255,255,255,0.15)] rounded-full pointer-events-none"
         />
         <motion.div
           animate={{ 
@@ -62,7 +62,7 @@ export function Hero() {
             rotate: [0, 10, 0],
           }}
           transition={{ duration: 7, delay: 2, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute bottom-1/3 left-1/3 w-20 h-20 border border-[#84ff00]/10 rounded-lg backdrop-blur-sm"
+          className="absolute bottom-1/3 left-1/3 w-20 h-20 border border-white/10 bg-gradient-to-br from-white/[0.08] to-white/[0.03] backdrop-blur-md shadow-[inset_0_1px_1px_rgba(255,255,255,0.15)] rounded-lg pointer-events-none"
         />
       </div>
 
@@ -77,8 +77,9 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
             className="text-white mb-8 text-6xl md:text-7xl lg:text-8xl leading-[1.1] font-extrabold tracking-tight font-syne"
           >
-            Transform Your Vision Into{' '}
-            <span className="relative inline-block">
+            Transform Your<br />
+            Vision Into<br />
+            <span className="relative inline-block mt-2">
               <span className="bg-gradient-to-r from-[#84ff00] via-[#9eff33] to-[#84ff00] bg-clip-text text-transparent animate-gradient bg-[length:200%_auto]">
                 Digital Reality
               </span>
@@ -104,7 +105,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
-            className="grid grid-cols-3 gap-8 max-w-2xl mx-auto mb-12 p-6 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm"
+            className="grid grid-cols-3 gap-8 max-w-2xl mx-auto mb-12 p-6 rounded-2xl border border-white/10 bg-gradient-to-b from-white/[0.07] to-white/[0.02] backdrop-blur-xl shadow-[inset_0_1px_1px_rgba(255,255,255,0.15),0_8px_32px_0_rgba(0,0,0,0.37)]"
           >
             <div className="text-center">
               <div className="text-3xl font-bold text-[#84ff00] mb-1">50+</div>

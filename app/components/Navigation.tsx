@@ -48,15 +48,17 @@ export function Navigation() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-black/95 backdrop-blur-lg shadow-lg shadow-[#84ff00]/5' : 'bg-black/80 backdrop-blur-sm'
-      }`}
+      className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
         <motion.div 
           whileHover={{ borderColor: "rgba(132, 255, 0, 0.6)" }}
           transition={{ duration: 0.3 }}
-          className="border border-[#84ff00]/40 rounded-full px-6"
+          className={`rounded-full px-6 transition-all duration-300 ${
+            isScrolled 
+              ? 'bg-black/60 backdrop-blur-xl border border-white/10 shadow-[inset_0_1px_1px_rgba(255,255,255,0.15),0_8px_32px_rgba(0,0,0,0.3)]' 
+              : 'border border-white/5 bg-white/[0.02] backdrop-blur-sm'
+          }`}
         >
           <div className="flex justify-between items-center h-20">
             {/* Logo */}
