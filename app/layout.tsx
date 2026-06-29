@@ -1,8 +1,22 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, MedievalSharp, Cinzel } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ 
+  subsets: ["latin"],
+  variable: "--font-inter",
+});
+
+const medievalSharp = MedievalSharp({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-medieval",
+});
+
+const cinzel = Cinzel({
+  subsets: ["latin"],
+  variable: "--font-cinzel",
+});
 
 export const metadata: Metadata = {
   title: "DevSuite",
@@ -15,7 +29,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${inter.variable} ${medievalSharp.variable} ${cinzel.variable}`}>
       <body className={inter.className}>{children}</body>
     </html>
   );

@@ -6,7 +6,12 @@ export default {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        medieval: ["var(--font-medieval)", "cursive"],
+        cinzel: ["var(--font-cinzel)", "serif"],
+      },
+    },
   },
   plugins: [],
 }
