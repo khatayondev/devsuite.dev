@@ -1,6 +1,6 @@
 'use client';
 
-import { ArrowRight, Check, Sparkles, Zap, Rocket, Layout } from 'lucide-react';
+import { ArrowRight, Check, Zap, Rocket, Layout } from 'lucide-react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { Navigation } from '../components/Navigation';
