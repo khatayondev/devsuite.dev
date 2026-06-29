@@ -8,8 +8,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        medieval: ["var(--font-medieval)", "cursive"],
-        cinzel: ["var(--font-cinzel)", "serif"],
+        syne: ["var(--font-syne)", "sans-serif"],
       },
     },
   },

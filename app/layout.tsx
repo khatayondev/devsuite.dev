@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, MedievalSharp, Cinzel } from "next/font/google";
+import { Inter, Syne } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({ 
@@ -7,15 +7,9 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
-const medievalSharp = MedievalSharp({
-  weight: "400",
+const syne = Syne({
   subsets: ["latin"],
-  variable: "--font-medieval",
-});
-
-const cinzel = Cinzel({
-  subsets: ["latin"],
-  variable: "--font-cinzel",
+  variable: "--font-syne",
 });
 
 export const metadata: Metadata = {
@@ -29,7 +23,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${medievalSharp.variable} ${cinzel.variable}`}>
+    <html lang="en" className={`${inter.variable} ${syne.variable}`}>
       <body className={inter.className}>{children}</body>
     </html>
   );
